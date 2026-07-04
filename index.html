@@ -1,133 +1,202 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
 
-<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta charset="UTF-8">
+        <meta
+            name="description"
+            content="SolScript is a fast, modern systems programming language focused on simplicity."
+        />
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+        <title>SolScript</title>
 
-    <title>SolScript Documentation</title>
+        <link rel="stylesheet" href="assets/css/style.css" />
 
-    <link rel="stylesheet"
-        href="assets/css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+    </head>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
-          rel="stylesheet">
+    <body>
+        <div class="background">
+            <div class="light light-1"></div>
+            <div class="light light-2"></div>
+            <div class="light light-3"></div>
+        </div>
 
-</head>
+        <header class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">S</div>
 
-<body>
-
-    <div class="background">
-
-        <div class="light light-1"></div>
-        <div class="light light-2"></div>
-        <div class="light light-3"></div>
-
-    </div>
-
-    <div class="app">
-
-        <aside id="sidebar"
-               class="sidebar panel">
-
-            <div class="sidebar-header">
-
-                <div class="logo">
-
-                    <div class="logo-icon">
-                        S
-                    </div>
-
-                    <div>
-
+                    <div class="logo-text">
                         <h1>SolScript</h1>
+                    </div>
+                </a>
 
-                        <span>Documentation</span>
+                <nav>
+                    <a href="index.html"> Home </a>
 
+                    <a href="docs.html"> Documentation </a>
+
+                    <a href="#"> Download </a>
+
+                    <a
+                        href="https://github.com/SolynxDev/SolScript"
+                        target="_blank"
+                    >
+                        GitHub
+                    </a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="container">
+                    <p class="version">Version 0.1.0 • Development Preview</p>
+
+                    <h2>
+                        Easy to Learn.
+
+                        <br />
+
+                        Hard to Master.
+
+                        <br />
+
+                        Blazingly Fast.
+                    </h2>
+
+                    <p class="hero-description">
+                        A compiled systems programming language inspired by C++,
+                        Rust, Luau, and Python.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="docs.html" class="button primary">
+                            Get Started
+                        </a>
+
+                        <a
+                            href="https://github.com/SolynxDev/SolScript"
+                            target="_blank"
+                            class="button secondary"
+                        >
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!--======================================
+            Introduction
+        =======================================-->
+
+            <section class="section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>What is SolScript?</h2>
                     </div>
 
+                    <div class="text-content">
+                        <p>
+                            SolScript is a modern, statically typed, compiled
+                            systems programming language built around three core
+                            ideas:
+                            <strong>performance</strong>,
+                            <strong>simplicity</strong>, and
+                            <strong>consistency</strong>.
+                        </p>
+
+                        <p>
+                            Inspired by C++, Rust, Luau, and Python, SolScript
+                            provides familiar syntax, modern language features,
+                            and native compiled performance while avoiding
+                            unnecessary complexity.
+                        </p>
+
+                        <p>
+                            Whether you're writing command-line tools, desktop
+                            applications, game engines, or low-level libraries,
+                            SolScript is designed to scale from your first
+                            "Hello, World!" to large production projects.
+                        </p>
+                    </div>
                 </div>
+            </section>
 
-            </div>
+            <!--======================================
+            Hello, World!
+        =======================================-->
 
-            <div class="search">
+            <section class="section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Hello, World.</h2>
 
-                <input id="search-input"
-                       type="text"
-                       placeholder="Search Documentation...">
+                        <p>
+                            A SolScript program is simply executed from top to
+                            bottom.
+                        </p>
+                    </div>
 
-            </div>
+                    <div class="code-block panel">
+                        <pre><code><span class="keyword">print</span>(<span class="string">"Hello, World!"</span>);</code></pre>
+                    </div>
+                </div>
+            </section>
 
-            <nav id="sidebar-navigation">
+            <!--======================================
+            Why SolScript?
+        =======================================-->
 
-            </nav>
+            <section class="section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Why SolScript?</h2>
+                    </div>
 
-            <div class="sidebar-footer">
+                    <div class="feature-list">
+                        <div>
+                            <h3>Performance</h3>
 
-                v0.1.0
+                            <p>
+                                Native compiled code with optimization
+                                comparable to modern C and C++ compilers.
+                            </p>
+                        </div>
 
-            </div>
+                        <div>
+                            <h3>Simplicity</h3>
 
-        </aside>
+                            <p>
+                                Learn the language quickly without needing to
+                                understand massive APIs or unnecessary
+                                boilerplate.
+                            </p>
+                        </div>
 
-        <main class="main">
+                        <div>
+                            <h3>Modern Features</h3>
 
-            <header class="header panel">
-
-                <button class="icon-button">
-                    ☰
-                </button>
-
-                <h2 id="page-title">
-                    Introduction
-                </h2>
-
-                <button class="icon-button">
-                    <a href="https://github.com/solynxdev/SolScript" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">GitHub</a>
-                </button>
-
-            </header>
-
-            <div class="content-layout">
-
-                <section id="doc-content"
-                         class="content panel">
-
-                    Loading Documentation...
-
-                </section>
-
-                <aside id="toc"
-                       class="toc panel">
-
-                    <h3>
-
-                        On This Page
-
-                    </h3>
-
-                    <nav id="toc-navigation">
-
-                    </nav>
-
-                </aside>
-
-            </div>
-
+                            <p>
+                                Generics, modules, reflection, interfaces,
+                                nullable types, exception handling, automatic
+                                garbage collection, and more.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
-
-    </div>
-
-</body>
-
+    </body>
 </html>
