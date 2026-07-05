@@ -91,6 +91,24 @@ input {
     opacity: 0.9;
 }
 
+.background::after {
+    content: "";
+    position: absolute;
+    inset: -8%;
+    background:
+        radial-gradient(circle at 12% 18%, rgba(255, 191, 77, 0.16), transparent 0 11%),
+        radial-gradient(circle at 84% 14%, rgba(255, 155, 61, 0.12), transparent 0 9%),
+        radial-gradient(circle at 68% 82%, rgba(255, 215, 122, 0.1), transparent 0 13%),
+        repeating-linear-gradient(60deg, rgba(255, 191, 77, 0.09) 0 1px, transparent 1px 94px),
+        repeating-linear-gradient(-60deg, rgba(255, 155, 61, 0.08) 0 1px, transparent 1px 94px),
+        repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.025) 0 1px, transparent 1px 84px);
+    opacity: 0.28;
+    mix-blend-mode: screen;
+    transform: perspective(1200px) rotateX(10deg);
+    filter: blur(0.4px);
+    pointer-events: none;
+}
+
 .light {
     position: absolute;
     border-radius: 999px;
@@ -207,11 +225,12 @@ input {
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(135deg, rgba(255, 255, 255, 0.16), transparent 30%),
-        radial-gradient(circle at 25% 12%, rgba(255, 255, 255, 0.22), transparent 18%),
-        radial-gradient(circle at 80% 0%, rgba(255, 191, 77, 0.12), transparent 22%);
+        linear-gradient(145deg, rgba(255, 255, 255, 0.22), transparent 28%),
+        radial-gradient(circle at 20% 10%, rgba(255, 255, 255, 0.32), transparent 16%),
+        radial-gradient(circle at 86% 0%, rgba(255, 191, 77, 0.18), transparent 20%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent 38%);
     pointer-events: none;
-    opacity: 0.75;
+    opacity: 0.85;
     transition:
         opacity 220ms ease,
         transform 220ms ease,
@@ -234,8 +253,9 @@ input {
     inset: 0;
     border-radius: inherit;
     box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.16),
-        inset 0 -1px 0 rgba(255, 191, 77, 0.08);
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+        inset 0 -1px 0 rgba(255, 191, 77, 0.12),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.02);
     pointer-events: none;
     opacity: 0.65;
     transition: opacity 220ms ease;
@@ -263,11 +283,11 @@ input {
 .code-block:focus-within,
 .callout:hover,
 .callout:focus-within {
-    transform: translateY(-3px);
-    border-color: rgba(255, 191, 77, 0.22);
+    transform: translateY(-4px) scale(1.004);
+    border-color: rgba(255, 191, 77, 0.26);
     box-shadow:
-        0 24px 80px rgba(0, 0, 0, 0.48),
-        0 0 0 1px rgba(255, 191, 77, 0.08);
+        0 30px 92px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(255, 191, 77, 0.1);
 }
 
 .panel:hover::before,
@@ -293,7 +313,7 @@ input {
 .callout:hover::before,
 .callout:focus-within::before {
     opacity: 1;
-    transform: translate3d(0, -1px, 0);
+    transform: translate3d(0, -1px, 0) scale(1.01);
 }
 
 .panel:hover::after,
@@ -353,14 +373,21 @@ input {
     display: grid;
     place-items: center;
     border-radius: 14px;
-    font-weight: 800;
-    color: #04111a;
+    overflow: hidden;
     background:
         radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.85), transparent 34%),
         linear-gradient(135deg, #fff0b0 0%, #ffcf6a 38%, #ff9b3d 100%);
     box-shadow:
         inset 0 1px 0 rgba(255, 255, 255, 0.56),
         0 12px 34px rgba(255, 191, 77, 0.22);
+}
+
+.brand-mark {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    filter: drop-shadow(0 8px 18px rgba(255, 159, 55, 0.2));
 }
 
 .logo-text h1,
@@ -445,13 +472,13 @@ nav {
 }
 
 .hero {
-    padding: 4.25rem 0 2rem;
+    padding: 5rem 0 2.8rem;
 }
 
 .hero .container {
     display: grid;
     grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
-    gap: 2rem;
+    gap: 2.6rem;
     align-items: center;
 }
 
@@ -496,13 +523,14 @@ nav {
     margin: 1.4rem 0 0;
     font-size: 1.08rem;
     color: var(--muted);
+    line-height: 1.75;
 }
 
 .hero-buttons {
     display: flex;
     flex-wrap: wrap;
     gap: 0.9rem;
-    margin-top: 1.9rem;
+    margin-top: 1.7rem;
 }
 
 .primary,
@@ -547,7 +575,7 @@ nav {
 .hero-visual {
     position: relative;
     border-radius: var(--radius-xl);
-    padding: 1.15rem;
+    padding: 1.2rem;
     box-shadow:
         var(--shadow),
         0 0 0 1px rgba(255, 255, 255, 0.04);
@@ -556,7 +584,7 @@ nav {
 .hero-visual-inner {
     position: relative;
     display: grid;
-    gap: 1rem;
+    gap: 1.05rem;
     min-height: 100%;
 }
 
@@ -592,9 +620,9 @@ nav {
 
 .hero-display {
     border-radius: calc(var(--radius-xl) - 8px);
-    padding: 1.25rem;
+    padding: 1.3rem;
     background:
-        radial-gradient(circle at top right, rgba(255, 191, 77, 0.18), transparent 24%),
+        radial-gradient(circle at top right, rgba(255, 191, 77, 0.22), transparent 24%),
         linear-gradient(180deg, rgba(10, 17, 32, 0.92), rgba(8, 12, 25, 0.96));
     border: 1px solid rgba(255, 255, 255, 0.08);
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
@@ -620,7 +648,7 @@ nav {
 
 .code-block {
     border-radius: var(--radius-lg);
-    padding: 1.15rem 1.15rem 1.05rem;
+    padding: 1.2rem 1.2rem 1.1rem;
 }
 
 .code-block pre {
@@ -651,7 +679,7 @@ nav {
 .stat-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 0.85rem;
+    gap: 0.95rem;
 }
 
 .metric-card {
@@ -673,7 +701,7 @@ nav {
 }
 
 .section {
-    padding: 1.1rem 0 4rem;
+    padding: 1rem 0 4.8rem;
 }
 
 .section-header {
@@ -681,7 +709,7 @@ nav {
     align-items: end;
     justify-content: space-between;
     gap: 1rem;
-    margin-bottom: 1.35rem;
+    margin-bottom: 1.7rem;
 }
 
 .section-header h2,
@@ -703,11 +731,12 @@ nav {
     margin: 0;
     color: var(--muted);
     max-width: 34rem;
+    line-height: 1.7;
 }
 
 .text-content {
     display: grid;
-    gap: 1rem;
+    gap: 1.15rem;
     max-width: 66ch;
     color: var(--muted);
 }
@@ -717,13 +746,13 @@ nav {
 .doc-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1rem;
+    gap: 1.15rem;
 }
 
 .feature-card,
 .doc-card {
     border-radius: var(--radius-lg);
-    padding: 1.2rem;
+    padding: 1.28rem;
     min-height: 100%;
 }
 
@@ -757,7 +786,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
     gap: 0.65rem;
-    margin-top: 1.5rem;
+    margin-top: 1.35rem;
 }
 
 .hero-capsules .chip {
@@ -778,7 +807,7 @@ nav {
 .docs-shell {
     display: grid;
     grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
-    gap: 1.25rem;
+    gap: 1.35rem;
     width: min(calc(100% - 2rem), 1440px);
     margin: 1rem auto 2rem;
 }
@@ -788,17 +817,17 @@ nav {
     top: 1rem;
     align-self: start;
     border-radius: var(--radius-xl);
-    padding: 1.15rem;
+    padding: 1.25rem;
     max-height: calc(100vh - 2rem);
     overflow: auto;
 }
 
 .sidebar-header {
-    margin-bottom: 1rem;
+    margin-bottom: 1.15rem;
 }
 
 .search {
-    margin: 1rem 0;
+    margin: 1.15rem 0;
 }
 
 .search input {
@@ -827,7 +856,7 @@ nav {
 .nav-group {
     display: grid;
     gap: 0.4rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.35rem;
 }
 
 .nav-group > span {
@@ -897,8 +926,8 @@ nav {
     justify-content: space-between;
     gap: 1rem;
     border-radius: var(--radius-xl);
-    padding: 1rem 1.15rem;
-    margin-bottom: 1rem;
+    padding: 1.05rem 1.2rem;
+    margin-bottom: 1.15rem;
 }
 
 .header-copy {
@@ -936,13 +965,13 @@ nav {
 .content-layout {
     display: grid;
     grid-template-columns: minmax(0, 1fr) 280px;
-    gap: 1rem;
+    gap: 1.15rem;
     align-items: start;
 }
 
 .content {
     border-radius: var(--radius-xl);
-    padding: 1.4rem;
+    padding: 1.55rem;
 }
 
 .content h2 + p,
@@ -957,19 +986,19 @@ nav {
 }
 
 .content > * + * {
-    margin-top: 1.3rem;
+    margin-top: 1.75rem;
 }
 
 .content-grid {
     display: grid;
-    gap: 1rem;
+    gap: 1.15rem;
 }
 
 .toc {
     position: sticky;
     top: 6rem;
     border-radius: var(--radius-xl);
-    padding: 1.05rem;
+    padding: 1.15rem;
 }
 
 .toc h3 {
@@ -982,7 +1011,7 @@ nav {
 
 .table-grid {
     display: grid;
-    gap: 0.75rem;
+    gap: 0.9rem;
 }
 
 .table-grid .row {
@@ -990,7 +1019,7 @@ nav {
     grid-template-columns: 1fr auto;
     gap: 1rem;
     align-items: center;
-    padding: 0.85rem 0.9rem;
+    padding: 0.95rem 1rem;
     border-radius: 16px;
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.06);
