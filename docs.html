@@ -1,133 +1,234 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="SolScript documentation landing page with guides, references, and examples."
+        />
+        <meta name="theme-color" content="#050816" />
+        <title>SolScript Documentation</title>
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div class="background" aria-hidden="true">
+            <div class="light light-1"></div>
+            <div class="light light-2"></div>
+            <div class="light light-3"></div>
+        </div>
 
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>SolScript Documentation</title>
-
-    <link rel="stylesheet"
-          href="assets/css/style.css">
-
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
-          rel="stylesheet">
-
-</head>
-
-<body>
-
-    <div class="background">
-
-        <div class="light light-1"></div>
-        <div class="light light-2"></div>
-        <div class="light light-3"></div>
-
-    </div>
-
-    <div class="app">
-
-        <aside id="sidebar"
-               class="sidebar panel">
-
-            <div class="sidebar-header">
-
-                <div class="logo">
-
-                    <div class="logo-icon">
-                        S
-                    </div>
-
-                    <div>
-
-                        <h1>SolScript</h1>
-
-                        <span>Documentation</span>
-
-                    </div>
-
+        <div class="docs-shell">
+            <aside id="sidebar" class="sidebar panel">
+                <div class="sidebar-header">
+                    <a href="index.html" class="logo" aria-label="Return to SolScript home">
+                        <div class="logo-icon">S</div>
+                        <div>
+                            <h1>SolScript</h1>
+                            <span>Documentation</span>
+                        </div>
+                    </a>
                 </div>
 
-            </div>
+                <div class="search">
+                    <input
+                        id="search-input"
+                        type="search"
+                        placeholder="Search documentation"
+                        aria-label="Search documentation"
+                    />
+                </div>
 
-            <div class="search">
+                <nav id="sidebar-navigation" class="sidebar-nav" aria-label="Documentation sections">
+                    <div class="nav-group">
+                        <span>Start here</span>
+                        <a class="is-active" href="#introduction">Introduction</a>
+                        <a href="#quick-start">Quick start</a>
+                        <a href="#core-ideas">Core ideas</a>
+                    </div>
 
-                <input id="search-input"
-                       type="text"
-                       placeholder="Search Documentation...">
+                    <div class="nav-group">
+                        <span>Reference</span>
+                        <a href="#syntax">Syntax overview</a>
+                        <a href="#examples">Examples</a>
+                        <a href="#tooling">Tooling</a>
+                    </div>
 
-            </div>
+                    <div class="nav-group">
+                        <span>More</span>
+                        <a href="index.html">Language home</a>
+                        <a href="https://github.com/SolynxDev/SolScript" target="_blank" rel="noopener noreferrer">
+                            GitHub
+                        </a>
+                    </div>
+                </nav>
 
-            <nav id="sidebar-navigation">
+                <div class="sidebar-footer">v0.1.0</div>
+            </aside>
 
-            </nav>
+            <main class="docs-main">
+                <header class="header panel">
+                    <a href="index.html" class="icon-button" aria-label="Back to home">Menu</a>
 
-            <div class="sidebar-footer">
+                    <div class="header-copy">
+                        <p class="eyebrow">Documentation base</p>
+                        <h1 id="page-title" class="doc-title">Introduction</h1>
+                    </div>
 
-                v0.1.0
+                    <a
+                        href="https://github.com/SolynxDev/SolScript"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="icon-button"
+                        aria-label="Open GitHub"
+                    >
+                        Open
+                    </a>
+                </header>
 
-            </div>
+                <div class="content-layout">
+                    <section id="doc-content" class="content panel">
+                        <section id="introduction">
+                            <h2>Welcome to SolScript</h2>
+                            <p>
+                                This is the base documentation landing page for SolScript. It is
+                                designed to feel like a proper documentation product: calm, readable,
+                                and structured enough to scale as the language grows.
+                            </p>
+                            <p>
+                                Use the sidebar to move between the major sections, or start with the
+                                quick-start cards below to get oriented fast.
+                            </p>
+                        </section>
 
-        </aside>
+                        <section id="quick-start">
+                            <h2>Quick start</h2>
+                            <div class="doc-grid">
+                                <article class="doc-card">
+                                    <h3>Install the toolchain</h3>
+                                    <p>
+                                        Add the compiler, wire up your editor, and make sure the first
+                                        build path is working before you dig into deeper language features.
+                                    </p>
+                                </article>
 
-        <main class="main">
+                                <article class="doc-card">
+                                    <h3>Run a hello world</h3>
+                                    <p>
+                                        Confirm that the environment is healthy with the smallest possible
+                                        program.
+                                    </p>
+                                </article>
 
-            <header class="header panel">
+                                <article class="doc-card">
+                                    <h3>Read the reference</h3>
+                                    <p>
+                                        Use the language reference when you need exact syntax, behavior,
+                                        or examples.
+                                    </p>
+                                </article>
+                            </div>
+                        </section>
 
-                <button class="icon-button">
-                    ☰
-                </button>
+                        <section id="core-ideas">
+                            <h2>Core ideas</h2>
+                            <div class="feature-list">
+                                <article class="feature-card">
+                                    <div class="feature-icon">1</div>
+                                    <h3>Readable structure</h3>
+                                    <p>
+                                        Syntax should stay approachable so that project files remain easy
+                                        to navigate over time.
+                                    </p>
+                                </article>
 
-                <h2 id="page-title">
-                    Introduction
-                </h2>
+                                <article class="feature-card">
+                                    <div class="feature-icon">2</div>
+                                    <h3>Compiled output</h3>
+                                    <p>
+                                        SolScript is positioned as a compiled systems language rather
+                                        than an interpreted scripting layer.
+                                    </p>
+                                </article>
 
-                <button class="icon-button">
-                    <a href="https://github.com/solynxdev/SolScript" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">GitHub</a>
-                </button>
+                                <article class="feature-card">
+                                    <div class="feature-icon">3</div>
+                                    <h3>Room to grow</h3>
+                                    <p>
+                                        The documentation structure should scale as features, modules,
+                                        and libraries are added.
+                                    </p>
+                                </article>
+                            </div>
+                        </section>
 
-            </header>
+                        <section id="syntax">
+                            <h2>Syntax overview</h2>
+                            <p>
+                                SolScript aims to keep first-pass code short and direct. This keeps
+                                examples readable and makes docs pages easier to scan.
+                            </p>
 
-            <div class="content-layout">
+                            <div class="code-block">
+                                <pre><code><span class="comment">// A minimal program</span>
+<span class="keyword">print</span>(<span class="string">"Hello, World!"</span>);</code></pre>
+                            </div>
+                        </section>
 
-                <section id="doc-content"
-                         class="content panel">
+                        <section id="examples">
+                            <h2>Examples</h2>
+                            <div class="table-grid">
+                                <div class="row">
+                                    <span>Starter programs</span>
+                                    <span>hello world, CLI tools</span>
+                                </div>
+                                <div class="row">
+                                    <span>Common docs sections</span>
+                                    <span>setup, syntax, API, examples</span>
+                                </div>
+                                <div class="row">
+                                    <span>Recommended pacing</span>
+                                    <span>overview first, details second</span>
+                                </div>
+                            </div>
+                        </section>
 
-                    Loading Documentation...
+                        <section id="tooling">
+                            <h2>Tooling</h2>
+                            <p>
+                                This landing page is intentionally neutral enough to support search,
+                                side navigation, and a table of contents as the docs site expands.
+                            </p>
 
-                </section>
+                            <div class="callout">
+                                <strong>Next step</strong>
+                                <p>
+                                    Add real docs pages under the sections above and wire the search box
+                                    to content once the content set is ready.
+                                </p>
+                            </div>
+                        </section>
+                    </section>
 
-                <aside id="toc"
-                       class="toc panel">
-
-                    <h3>
-
-                        On This Page
-
-                    </h3>
-
-                    <nav id="toc-navigation">
-
-                    </nav>
-
-                </aside>
-
-            </div>
-
-        </main>
-
-    </div>
-
-</body>
-
+                    <aside id="toc" class="toc panel">
+                        <h3>On This Page</h3>
+                        <nav id="toc-navigation" aria-label="Table of contents">
+                            <a href="#introduction">Introduction</a>
+                            <a href="#quick-start">Quick start</a>
+                            <a href="#core-ideas">Core ideas</a>
+                            <a href="#syntax">Syntax overview</a>
+                            <a href="#examples">Examples</a>
+                            <a href="#tooling">Tooling</a>
+                        </nav>
+                    </aside>
+                </div>
+            </main>
+        </div>
+    </body>
 </html>
